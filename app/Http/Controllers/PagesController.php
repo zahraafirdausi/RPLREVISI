@@ -13,9 +13,4 @@ class PagesController extends Controller
     public function masuk() {
         return view('signin');
     }
-    
-    //public function index()
-   // {
-    //   return view('home');
-    //}
 }

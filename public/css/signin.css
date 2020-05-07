@@ -22,7 +22,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap :7rem;
+    grid-gap: 7rem;
     padding: 0 2rem;
 }
 
@@ -205,6 +205,11 @@ a:hover{
 	color: #00a2c6;
 }
 
+.invalid-feedback {
+	color: #e3342f;
+	font-size: 14px;
+}
+
 .btn{
 	display: block;
 	width: 100%;
@@ -231,6 +236,10 @@ a:hover{
 
 #register {
 	left: 450px;
+}
+
+#register .input-div div {
+	height: 35px;
 }
 
 @media screen and (max-width: 1005px){

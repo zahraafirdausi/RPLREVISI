@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ezlaundry | Sign In</title>
 	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
 </head>
@@ -20,6 +21,7 @@
 					<button type="button" class="toggle-btn active" onclick="login()">Log In</button>
 					<button type="button" class="toggle-btn" onclick="register()">Register</button>
 				</div>
+			<!-- Log In -->
 				<form method="POST" id="login" class="input-grup" action="{{ route('login') }}">
 					@csrf
 					<img src="/img/nav-logo.png">
@@ -30,7 +32,7 @@
 						</div>
 						<div class="div">
 								<h5>Email</h5>
-								<input id="email" type="email" class="input" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+								<input id="email" type="email" class="input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 						</div>
 					</div>
 					<div class="input-div pass">
@@ -39,55 +41,94 @@
 						</div>
 						<div class="div">
 							<h5>Password</h5>
-							<input id="password" type="password" class="input" name="password" required autocomplete="current-password">
+							<input id="password_" type="password" class="input @error('password_') is-invalid @enderror" name="password" required autocomplete="current-password">
 						</div>
 					</div>
-					<a href="#">Forgot Password?</a>
+					@error('email')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong><br>
+						</span>
+					@enderror
+					@error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong><br>
+                        </span>
+					@enderror
+					@if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}">
+                            Forgot Password?
+                        </a>
+                    @endif
 					<input type="submit" class="btn btn-primary" value="Login">
 				</form>
+			<!-- Log In -->
+
+			<!-- Register -->
 				<form method="POST" id="register" class="input-grup" action="{{ route('register') }}">
 					@csrf
 					<div class="input-div pass">
-					<div class="i"></div>
+						<div class="i"></div>
 						<div class="div">
 							<h5>Email</h5>
-							<input id="email" type="email" class="input" name="email" value="{{ old('email') }}" required autocomplete="email">
+							<input id="email_regis" type="email" class="input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+							<h5>Nama Lengkap</h5>
+							<input id="nama_lengkap" type="text" class="input" name="Nama_Lengkap" value="{{ old('Nama_Lengkap') }}" required autocomplete="Nama_Lengkap" >
 						</div>
-						<div class="input-div pass">
-							<div class="i"></div>
-							<div class="div">
-								<h5>Nama Lengkap</h5>
-								<input id="Nama_Lengkap" type="text" class="input" name="Nama_Lengkap" value="{{ old('Nama_Lengkap') }}" required autocomplete="Nama_Lengkap" autofocus>
-							</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+							<h5>Alamat</h5>
+							<input id="alamat" type="text" class="input" name="Alamat" value="{{ old('Alamat') }}" required autocomplete="Alamat">
 						</div>
-						<div class="input-div pass">
-							<div class="i"></div>
-							<div class="div">
-								<h5>Alamat</h5>
-								<input id="Alamat" type="text" class="input" name="Alamat" value="{{ old('Alamat') }}" required autocomplete="Alamat" autofocus>
-							</div>
+					</div>
+					<div class="input-div one">
+						<div class="i"></div>
+						<div class="div">
+							<h5>Username</h5>
+							<input id="username" type="text" class="input @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
 						</div>
-						<div class="input-div one">
-							<div class="i"></div>
-							<div class="div">
-								<h5>Username</h5>
-								<input id="username" type="text" class="input" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
-							</div>
+					</div>
+					<div class="input-div one">
+						<div class="i"></div>
+						<div class="div">
+							<h5>Password</h5>
+							<input id="password" type="password" class="input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 						</div>
-						<div class="input-div one">
-							<div class="i"></div>
-							<div class="div">
-								<h5>Password</h5>
-								<input id="password" type="password" class="input" name="password" required autocomplete="new-password">
-							</div>
+					</div>
+					<div class="input-div one">
+						<div class="i"></div>
+						<div class="div">
+							<h5>Confirm Password</h5>
+							<input id="password-confirm" type="password" class="input" name="password_confirmation" required autocomplete="new-password">
 						</div>
-						<input type="submit" class="btn btn-primary" value="Register">
-					</form>
+					</div>
+					@error('email')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong><br>
+						</span>
+					@enderror
+					@error('username')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong><br>
+                        </span>
+					@enderror
+					@error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong><br>
+                        </span>
+                    @enderror
+					<input type="submit" class="btn btn-primary" value="Register">
+				</form>
+			<!-- Register -->
 			</div>
 		</div>
     </div>
 	<script src="/js/signin.js"></script>
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </body>
 </html>

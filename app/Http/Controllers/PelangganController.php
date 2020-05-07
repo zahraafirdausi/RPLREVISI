@@ -11,10 +11,10 @@ class PelangganController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('layouts.pelanggan.index');
-    }
+    // public function index()
+    // {
+    //     return view('pelanggan.index');
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +23,7 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        return view('layouts.pelanggan.create');
+        return view('pelanggan.create');
     }
 
     /**
