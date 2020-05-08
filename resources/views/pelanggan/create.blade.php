@@ -43,6 +43,10 @@
                 <input type="radio" name="pilihan_paket_laundry" value="standart">Standart (5 Day)
             </div>
             <div class="form-group">
+            <label> Berat </label>
+            <input type="integer" name="berat" class="form-control" placeholder="0" />
+            </div>
+            <div class="form-group">
                 <label> Diskon/Reward </label>
                 <input type="integer" name="diskon_reward" class="form-control" placeholder="0" />
             </div>
