@@ -27,10 +27,6 @@
                 <input type="text" name="tanggal_transaksi" class="form-control" placeholder="Tanggal Transaksi" />
             </div>
             <div class="form-group">
-                <label> Nama Lengkap </label>
-                <input type="text" name="nama_lengkap" class="form-control" placeholder="Nama Lengkap" />
-            </div>
-            <div class="form-group">
                 <label> Alamat </label>
                 <input type="text" name="alamat" class="form-control" placeholder="Alamat" />
             </div>
@@ -47,13 +43,14 @@
                 <input type="radio" name="pilihan_paket_laundry" value="standart">Standart (5 Day)
             </div>
             <div class="form-group">
-                <label> Berat </label>
-                <input type="integer" name="berat" class="form-control" placeholder="Berat" />
+                <label> Diskon/Reward </label>
+                <input type="integer" name="diskon_reward" class="form-control" placeholder="0" />
             </div>
             <div class="form-group">
-                <label> Diskon </label>
-                <input type="integer" name="diskon" class="form-control" placeholder="0" />
-            </div>
+                <label> Status Pembayaran </label><br>
+                <input type="radio" name="status_pembayaran" value="cod">COD 
+                <input type="radio" name="status_pembayaran" value="e-wallet">E-Wallet
+             </div>
             <div class="form-group">
                 <label> Total Bayar </label>
                 <input type="integer" name="total_bayar" class="form-control" placeholder="0 " />

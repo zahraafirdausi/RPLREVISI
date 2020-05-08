@@ -36,22 +36,22 @@ class PelangganController extends Controller
     {
         $this->validate($request, [
             'tanggal_transaksi'     => 'required',
-            'nama_lengkap'          => 'required',
             'alamat'                => 'required',
             'no_telepon'            => 'required',
             'pilihan_paket_laundry' => 'required',
             'berat'                 => 'required',
-            'diskon'                => 'required',
+            'diskon_reward'         => 'required',
+            'status_pembayaran'     => 'required',
             'total_bayar'           => 'required',
         ]);
         $pelanggans = new pelanggan([
             'tanggal_transaksi'     =>  $request->get('tanggal_transaksi'),
-            'nama_lengkap'          =>  $request->get('nama_lengkap'),
             'alamat'                =>  $request->get('alamat'),
             'no_telepon'            =>  $request->get('no_telepon'),
             'pilihan_paket_laundry' =>  $request->get('pilihan_paket_laundry'),
             'berat'                 =>  $request->get('berat'),
-            'diskon'                =>  $request->get('diskon'),
+            'diskon_reward'         =>  $request->get('diskon_reward'),
+            'status_pembayaran'     =>  $request->get('status_pembayaran'),
             'total_bayar'           =>  $request->get('total_bayar')
         ]);
         $pelanggans->save();

@@ -36,4 +36,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $primaryKey = 'id_user';
+
+    public function ewallet()
+    {
+        return $table->hasOne('App\e-wallet');
+    }
+
+    public function pelanggan()
+    {
+        return $table->hasMany('App\pelanggan');
+    }
+
+    public function user_reward()
+    {
+        return $table->hasMany('App\user_reward');
+    }
 }

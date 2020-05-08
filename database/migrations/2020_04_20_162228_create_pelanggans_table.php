@@ -14,16 +14,18 @@ class CreatePelanggansTable extends Migration
     public function up()
     {
         Schema::create('pelanggans', function (Blueprint $table) {
-            $table->bigIncrements('no_order');
+            $table->bigIncrements('id_order');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id_user')->on('users');
             $table->date('tanggal_transaksi');
-            $table->string('nama_lengkap');
             $table->text('alamat');
             $table->integer('no_telepon');
             $table->enum('pilihan_paket_laundry',['Standart (5 Day)', 'Premium (3 Day)', 'Express (2 Day)', 'DryClean (1 Day)']);
             $table->integer('berat');
-            $table->integer('diskon');
+            $table->integer('diskon_reward');
+            $table->enum('status_pembayaran', ['cod', 'e-wallet']);
             $table->integer('total_bayar');
-            $table->string('status');
+            $table->string('status_order');
             $table->timestamps();
         });
     }
