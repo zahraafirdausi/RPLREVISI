@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Web Icon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="\icon\favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="\icon\favicon-16x16.png">
+		<link rel="manifest" href="\site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="apple-touch-icon" sizes="180x180" href="\icon\apple-touch-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="\icon\favicon.ico" />
+  <!-- Web Icon -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="\css\nav.css">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <title>@yield('title')</title>
 </head>
 <body>
-  <header>
     <nav class="fixed-top">
       <a class="navbar-brand" href="{{ url('/') }}">
         <img src="\img\nav-logo.png">
@@ -21,8 +31,25 @@
         <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="#service">Service</a></li>
         <li><a href="#reward">Reward</a></li> 
-        <li><a class="btn  btn-outline-light btn-sm" href="{{ url('/signin') }}" role="button">Login/Register</a></li>
-        </ul>
+        @guest
+          <li><a class="btn  btn-outline-light btn-sm" href="{{ url('/signin') }}" role="button">Login/Register</a></li>
+        @else
+          <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              {{ Auth::user()->Nama_Lengkap }} <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('login') }}">Profile</a>
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </div>
+          </li>
+        @endguest
+      </ul>
 
       <div class="menu-toggle">
          <input type="checkbox" name="" id="">
@@ -31,8 +58,6 @@
          <span></span>
       </div>
     </nav>
-  </header>
-
   <main>
     @yield('container')
   </main>
@@ -46,6 +71,8 @@
       <span>All Rights Reserved</span>
     </div>
   </footer>
+  <!-- Script -->
+  <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="\js\script.js"></script>
 </body>
 </html>

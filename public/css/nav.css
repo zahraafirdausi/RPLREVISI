@@ -1,12 +1,7 @@
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 60px;
+    position: relative;
 }
 
 /* Navbar */
@@ -45,10 +40,18 @@ nav ul {
     justify-content: space-between;
 }
 
+.nav-item {
+    top: -7px
+}
+
 nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 1em;
+}
+
+nav ul li div{
+    padding-bottom: 20px;
 }
 
 nav ul li .btn {
@@ -125,10 +128,12 @@ nav a:hover {
     transform: scale(0)6
 }
 
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
+main {
+    margin-top: 64px;
+}
+
+.carousel-item img {
+    max-height: 92vh;
 }
   
 .footer {
@@ -140,17 +145,12 @@ nav a:hover {
     width: 100%;
 }
 
-.container {
+.footer .container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
     font-size: 0.8em;
     color: #6c757d;
-}
-
-main {
-    margin-top: 72px;
-}
-
-main .container {
-    margin-top: 40px;
 }
 
 /* Responsive Breakpoint */
@@ -187,9 +187,5 @@ main .container {
     nav ul.slide {
         opacity: 1;
         transform: translateX(0);
-    }
-
-    main .container {
-        margin-top: 100px;
     }
 }

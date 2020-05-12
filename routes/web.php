@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pelanggan', 'PelangganController@create');
+Route::get('/order', 'PelangganController@create');
 Route::get('/', 'PagesController@home');
 Route::get('/signin', 'PagesController@masuk')->middleware('guest')->name('signin');
 
