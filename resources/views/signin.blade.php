@@ -12,7 +12,9 @@
 		<link rel="shortcut icon" type="image/x-icon" href="\icon\favicon.ico" />
 	<!-- Web Icon -->
 	<title>Ezlaundry | Sign In</title>
+	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<!-- Font -->
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
