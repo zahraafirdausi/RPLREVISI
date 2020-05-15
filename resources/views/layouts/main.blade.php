@@ -14,9 +14,13 @@
 		<link rel="shortcut icon" type="image/x-icon" href="\icon\favicon.ico" />
   <!-- Web Icon -->
   <!-- Stylesheet -->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="\css\nav.css">
   <!-- Font -->
+  <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext,vietnamese"
+	 rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800&amp;subset=hebrew" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <title>@yield('title')</title>
 </head>
@@ -28,9 +32,9 @@
       </a>
 
       <ul>
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#reward">Reward</a></li> 
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#contact">Contact</a></li> 
         @guest
           <li><a class="btn  btn-outline-light btn-sm" href="{{ url('/signin') }}" role="button">Login/Register</a></li>
         @else

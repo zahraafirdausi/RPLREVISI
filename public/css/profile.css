@@ -164,12 +164,20 @@ nav .logo a{
   padding: 20px;
 }
 
-label {
-  font-weight: bold;
+.card-deck .card {
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.125), -2px -2px 4px rgba(0,0,0,0.125);
+  border-radius: 10px;
+  margin: 10px 15px;
 }
 
-.btn {
-  width: 10em;
+.card-deck .card img {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+label {
+  font-weight: bold;
 }
 
 @media (max-width: 1024px) {

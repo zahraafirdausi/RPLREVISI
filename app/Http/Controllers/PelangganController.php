@@ -77,7 +77,7 @@ class PelangganController extends Controller
      */
     public function show($id)
     {
-        return view('pelanggan.riwayat');
+        
     }
 
     /**
