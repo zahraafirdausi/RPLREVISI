@@ -19,13 +19,13 @@ class CreatePelanggansTable extends Migration
             $table->foreign('user_id')->references('id_user')->on('users');
             $table->date('tanggal_transaksi');
             $table->text('alamat');
-            $table->integer('no_telepon');
+            $table->string('no_telepon');
             $table->enum('pilihan_paket_laundry',['Standart (5 Day)', 'Premium (3 Day)', 'Express (2 Day)', 'DryClean (1 Day)']);
             $table->integer('berat');
             $table->integer('diskon_reward');
             $table->enum('status_pembayaran', ['cod', 'e-wallet']);
             $table->integer('total_bayar');
-            $table->string('status_order');
+            $table->string('status_order')->nullable();
             $table->timestamps();
         });
     }

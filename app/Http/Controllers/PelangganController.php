@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pelanggan;
+use Illuminate\Support\Facades\Auth;
 
 class PelangganController extends Controller
 {
@@ -34,6 +36,9 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
+        // buat ngecek apakah masuk atau tidak
+       //return $request->all();
+
         $this->validate($request, [
             'tanggal_transaksi'     => 'required',
             'alamat'                => 'required',
@@ -44,19 +49,20 @@ class PelangganController extends Controller
             'status_pembayaran'     => 'required',
             'total_bayar'           => 'required',
         ]);
-        $pelanggans = new pelanggan([
-            'tanggal_transaksi'     =>  $request->get('tanggal_transaksi'),
-            'alamat'                =>  $request->get('alamat'),
-            'no_telepon'            =>  $request->get('no_telepon'),
-            'pilihan_paket_laundry' =>  $request->get('pilihan_paket_laundry'),
-            'berat'                 =>  $request->get('berat'),
-            'diskon_reward'         =>  $request->get('diskon_reward'),
-            'status_pembayaran'     =>  $request->get('status_pembayaran'),
-            'total_bayar'           =>  $request->get('total_bayar')
-        ]);
-        $pelanggans->save();
-        return redirect()->route('pelanggan.create')->with('success', 'Data Added');
 
+        $pelanggan = new pelanggan;
+            $pelanggan->user_id               = Auth::id();
+            $pelanggan->tanggal_transaksi     = $request->tanggal_transaksi;
+            $pelanggan->alamat                = $request->alamat;
+            $pelanggan->no_telepon            = $request->no_telepon;
+            $pelanggan->pilihan_paket_laundry = $request->pilihan_paket_laundry;
+            $pelanggan->berat                 = $request->berat;
+            $pelanggan->diskon_reward         = $request->diskon_reward;
+            $pelanggan->status_pembayaran     = $request->status_pembayaran;
+            $pelanggan->total_bayar           = $request->total_bayar;
+        $pelanggan->save();
+        return $pelanggan;
+        //return redirect()->route('pelanggan.home')->with('success', 'Data Added');
     }
 
     /**

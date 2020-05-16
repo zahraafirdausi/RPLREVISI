@@ -20,7 +20,7 @@
         <div class="d-flex pb-2 mb-3 border-bottom">
             <h1 class="h2" style="">Buat Pesanan</h1>
         </div>
-        <form class="d-flex-column justify-content-around mr-2" method="post" action="{{url('pelanggan')}}">
+        <form class="d-flex-column justify-content-around mr-2" method="post" action="/order/store">
             {{csrf_field()}}
             <div class="form-group">
                 <label for="tanggal_transaksi"> Tanggal Transaksi</label>
@@ -35,13 +35,13 @@
                 <input type="integer" name="no_telepon" id="no_telepon" class="form-control" placeholder="No.Telepon" />
             </div>
             <div class="form-group">
-                <label for="paket_laundry"> Pilih Paket Laundry </label>
-                <select class="custom-select" id="paket_laundry" required>
-                    <option name="pilihan_paket_laundry" value="standart">Standart (5 Day)</option>
-                    <option name="pilihan_paket_laundry" value="premium">Premium (3 Day)</option>
-                    <option name="pilihan_paket_laundry" value="express">Express (2 Day)</option>
-                    <option name="pilihan_paket_laundry" value="dry_clean">Dry Clean (1 Day)</option>
-                </select>
+                <label for="pilihan_paket_laundry"> Pilih Paket Laundry </label>
+                <select class="custom-select" id="pilihan_paket_laundry" name="pilihan_paket_laundry" required>
+                    <option name="pilihan_paket_laundry" value="Standart (5 Day)">Standart (5 Day)</option>
+                    <option name="pilihan_paket_laundry" value="Premium (3 Day)">Premium (3 Day)</option>
+                    <option name="pilihan_paket_laundry" value="Express (2 Day)">Express (2 Day)</option>
+                    <option name="pilihan_paket_laundry" value="DryClean (1 Day)">Dry Clean (1 Day)</option>
+                    </select>
             </div>
             <div class="form-group">
             <label for="berat"> Berat </label>
@@ -52,8 +52,8 @@
                 <input type="integer" name="diskon_reward" id="diskon_reward" class="form-control" placeholder="0" />
             </div>
             <div class="form-group">
-                <label for="metode_pembayaran"> Metode Pembayaran </label><br>
-                <select class="custom-select" id="metode_pembayaran" required>
+                <label for="status_pembayaran"> Metode Pembayaran </label><br>
+                <select class="custom-select" id="status_pembayaran" name="status_pembayaran" required>
                     <option name="status_pembayaran" value="e-wallet">E-Wallet</option>
                     <option name="status_pembayaran" value="cod">COD </option>
                 </select>
