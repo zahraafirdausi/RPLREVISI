@@ -28,6 +28,16 @@ class PelangganController extends Controller
         return view('pelanggan.create');
     }
 
+    public function tampilin()
+    {
+        return view('pelanggan.riwayat');
+    }
+
+    public function reward()
+    {
+        return view('pelanggan.reward');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -73,7 +83,7 @@ class PelangganController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

@@ -23,6 +23,8 @@ Route::get('/', function () {
 
 Route::get('/order', 'PelangganController@create');
 Route::post('/order/store', 'PelangganController@store');
+Route::get('/riwayat', 'PelangganController@tampilin');
+Route::get('/reward', 'PelangganController@reward');
 Route::get('/', 'PagesController@home');
 Route::get('/signin', 'PagesController@masuk')->middleware('guest')->name('signin');
 

@@ -38,14 +38,14 @@
               </div>
           </div>
           <ul class="siderbar_menu">
-            <li class="active">
+            <li>
               <a href="{{ url('home') }}">
                 <div class="icon"><i class="fas fa-user"></i></div>
                 <div class="title">Profile</div>
               </a> 
             </li>  
             <li>
-              <a href="#">
+              <a href="{{ url('reward') }}">
                 <div class="icon"><i class="fas fa-award"></i></div>
                 <div class="title">Reward</div>
               </a>
@@ -57,7 +57,7 @@
               </a>
             </li>  
             <li>
-              <a href="#">
+              <a href="{{ url('riwayat') }}">
                 <div class="icon"><i class="fas fa-receipt"></i></div>
                 <div class="title">Riwayat Pesanan</div>
               </a>            
