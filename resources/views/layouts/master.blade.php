@@ -14,7 +14,7 @@
 	<!-- Web Icon -->
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-   <!-- Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -56,8 +56,8 @@
                 <div class="title">Buat Pesanan</div>
               </a>
             </li>  
-            <li>
-              <a href="{{ url('riwayat') }}">
+            <li class="active">
+              <a href="{{ url('riwayat/masuk') }}">
                 <div class="icon"><i class="fas fa-receipt"></i></div>
                 <div class="title">Riwayat Pesanan</div>
               </a>            
@@ -97,19 +97,47 @@
   </div>
   <!-- Script and related things-->
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="\js\bootstrap-input-spinner.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script>
       $(document).ready(function(){
         $(function(){
           $('.siderbar_menu a').filter(function(){return this.href==location.href}).parent().addClass('active').siblings().removeClass('active')
         });
+
         $(".hamburger").click(function(){
           $(".wrapper").addClass("active");
         });
+
         $(".close, .bg_shadow").click(function(){
           $(".wrapper").removeClass("active");
         });
+
+        var table = $('#datatable').DataTable(); 
+
+        table.on('click', '.delete', function() {
+          $tr = $(this).closest('tr');
+          if(($tr).hasClass('child')) {
+            $tr = $tr.prev('.parent');
+          }
+
+          var data = table.row($tr).data();
+          console.log(data);
+
+          $('#deleteForm').attr('action', '/riwayat/'+data[0]);
+          $('#deleteModal').modal('show');
+        });
+
       });
+
+      $("input[type='number']").inputSpinner();
+
+
+      // Delete Pesanan
     </script>
   <!-- Script and related things-->
 </body>

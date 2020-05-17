@@ -164,17 +164,21 @@ main {
 
 /* banner style */
 .main-banner {
-    background: url(../img/banner1.jpg) no-repeat center;
+    background: url(../img/banner.png) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     min-height: 92vh;
+} 
+
+.container button {
+    margin-top: 50px;
 }
 
 .w3layouts-banner-info {
-    padding-top: 15em;
+    padding-top: 17em;
 }
 
 .w3layouts-banner-info h3 {
@@ -187,11 +191,11 @@ main {
 .w3layouts-banner-info h3:after {
     content: "";
     background: #fff;
-    width: 80px;
+    width: 100px;
     height: 3px;
     position: absolute;
     bottom: -20px;
-    left: 46%;
+    left: 45.5%;
 }
 
 /* //banner style */
@@ -297,6 +301,12 @@ h3.w3ls-title span {
 }
 
 /* Mobile View */
+@media(max-width: 1120px) {
+    .w3layouts-banner-info h3:after {
+        left: 44.8%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -337,7 +347,7 @@ h3.w3ls-title span {
 
     h3.tittle-w3layouts {
         font-size: 34px;
-    }
+    }   
 
     h3.w3ls-title {
         font-size: 32px;
@@ -350,9 +360,17 @@ h3.w3ls-title span {
     p {
         font-size: 14px;
     }
+
+    .w3layouts-banner-info h3:after {
+        left: 39%;
+    }
 }
 
 @media(max-width: 480px) {
+    .w3layouts-banner-info h3:after {
+        left: 39%;
+    }
+
     .w3layouts-banner-info h3 {
         font-size: 1.8em;
     }

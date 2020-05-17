@@ -28,11 +28,27 @@ class PelangganController extends Controller
         return view('pelanggan.create');
     }
 
-    public function tampilin()
-    {
-        return view('pelanggan.riwayat');
+    public function masuk()
+    {       
+        $id = Auth::id();
+        $order = pelanggan::all()->where('user_id', $id)->where('status_order', 'Menunggu Kurir')->sortBy('tanggal_transaksi')->sortDesc();
+        return view('pelanggan.riwayat')->with('order', $order);
     }
 
+    public function proses()
+    {   
+        $id = Auth::id();
+        $order = pelanggan::all()->where('user_id', $id)->where('status_order', 'Proses')->sortBy('tanggal_transaksi')->sortDesc();
+        return view('pelanggan.riwayat')->with('order', $order);
+    }
+    
+    public function selesai()
+    {   
+        $id = Auth::id();
+        $order = pelanggan::all()->where('user_id', $id)->where('status_order', 'Selesai')->sortBy('tanggal_transaksi')->sortDesc();
+        return view('pelanggan.riwayat')->with('order', $order);
+    }
+    
     public function reward()
     {
         return view('pelanggan.reward');
@@ -50,7 +66,6 @@ class PelangganController extends Controller
        //return $request->all();
 
         $this->validate($request, [
-            'tanggal_transaksi'     => 'required',
             'alamat'                => 'required',
             'no_telepon'            => 'required',
             'pilihan_paket_laundry' => 'required',
@@ -62,7 +77,7 @@ class PelangganController extends Controller
 
         $pelanggan = new pelanggan;
             $pelanggan->user_id               = Auth::id();
-            $pelanggan->tanggal_transaksi     = $request->tanggal_transaksi;
+            $pelanggan->tanggal_transaksi     = now();
             $pelanggan->alamat                = $request->alamat;
             $pelanggan->no_telepon            = $request->no_telepon;
             $pelanggan->pilihan_paket_laundry = $request->pilihan_paket_laundry;
@@ -70,9 +85,10 @@ class PelangganController extends Controller
             $pelanggan->diskon_reward         = $request->diskon_reward;
             $pelanggan->status_pembayaran     = $request->status_pembayaran;
             $pelanggan->total_bayar           = $request->total_bayar;
+            $pelanggan->status_order          = 'Menunggu Kurir';
         $pelanggan->save();
-        return $pelanggan;
-        //return redirect()->route('pelanggan.home')->with('success', 'Data Added');
+        // return $pelanggan;
+        return back()->with('success', 'Pesanan Berhasil Dibuat');
     }
 
     /**
@@ -117,6 +133,9 @@ class PelangganController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = pelanggan::find($id);
+        $order->delete();
+
+        return redirect('/riwayat/masuk')->with('success', 'Pesanan Dibatalkan');
     }
 }

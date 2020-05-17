@@ -62,21 +62,21 @@
          <span></span>
       </div>
     </nav>
-  <main>
-    @yield('container')
-  </main>
+    <main>
+      @yield('container')
+    </main>
 
-  <footer class="footer py-3">
-    <div class="container">
-      <span>Copyright © 2020 ezlaundry</span>
-      <svg class="bi bi-dot" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"/>
-      </svg>
-      <span>All Rights Reserved</span>
-    </div>
-  </footer>
-  <!-- Script -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
-  <script src="\js\script.js"></script>
+    <footer class="footer py-3">
+      <div class="container">
+        <span>Copyright © 2020 ezlaundry</span>
+        <svg class="bi bi-dot" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"/>
+        </svg>
+        <span>All Rights Reserved</span>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="\js\script.js"></script>
 </body>
 </html>

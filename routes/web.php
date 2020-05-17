@@ -22,8 +22,11 @@ Route::get('/', function () {
 });
 
 Route::get('/order', 'PelangganController@create');
+Route::post('/riwayat', 'PelangganController@delete'); 
 Route::post('/order/store', 'PelangganController@store');
-Route::get('/riwayat', 'PelangganController@tampilin');
+Route::get('/riwayat/masuk', 'PelangganController@masuk');
+Route::get('/riwayat/proses', 'PelangganController@proses');
+Route::get('/riwayat/selesai', 'PelangganController@selesai');
 Route::get('/reward', 'PelangganController@reward');
 Route::get('/', 'PagesController@home');
 Route::get('/signin', 'PagesController@masuk')->middleware('guest')->name('signin');

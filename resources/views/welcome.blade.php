@@ -5,8 +5,8 @@
 <div class="main-banner" id="home">
    <!-- banner -->
    <div class="w3layouts-banner-info">
-      <div class="container">
-         <div class="style-banner text-center">
+      <div class="container text-center">
+         <div class="style-banner">
             <p class="text-li mb-2">Wash, Dry & Fold</p>
             <h3 class="text-wh font-weight-bold text-uppercase">We Are Expert Cleaner</h3>
          </div>
@@ -17,7 +17,7 @@
 <!-- //main -->
 
 <!-- about -->
-<section class="about py-5" id="about">
+{{-- <section class="about py-5" id="about">
    <div class="container py-xl-5 py-lg-3">
       <div class="row">
          <div class="col-lg-6 about-left-w3pvt pr-lg-5">
@@ -34,33 +34,33 @@
          </div>
       </div>
    </div>
-</section>
+</section> --}}
 <!-- //about -->
 
 <!-- services -->
-<div class="serives-agile pb-5" id="services">
+{{-- <div class="serives-agile pb-5" id="services">
    <div class="container pb-xl-5 pb-lg-3">
       <h3 class="w3ls-title text-center font-weight-bold mb-5 pb-lg-4"><span class="mb-1">What we offer?</span>
          Our Services</h3>
       <div class="row text-center">
          <div class="col-lg-4 services-w3ls-grid">
-            <img src="images/s1.png" alt="" class="img-fluid" />
+            <img src="\img\s1.png" alt="" class="img-fluid" />
             <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2">Service 1</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
          </div>
          <div class="col-lg-4 services-w3ls-grid my-lg-0 my-4">
-            <img src="images/s2.png" alt="" class="img-fluid" />
+            <img src="\img\s2.png" alt="" class="img-fluid" />
             <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2">Service 2</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
          </div>
          <div class="col-lg-4 services-w3ls-grid">
-            <img src="images/s3.png" alt="" class="img-fluid" />
+            <img src="\img\s3.png" alt="" class="img-fluid" />
             <h4 class="mt-lg-5 mt-4 mb-sm-3 mb-2">Service 3</h4>
             <p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 <!-- //services -->
 
 <!-- middle section 2 -->
@@ -68,7 +68,7 @@
    <div class="row no-gutters">
       <div class="col-xl-6 who-left-w3pvt pt-xl-3">
          <h3 class="w3ls-title font-weight-bold mb-sm-5 mb-4"><span class="mb-3">Wash, Dry & Fold</span>
-            Launderette is a service you can trust.</h3>
+            Ezlaundry is a service you can trust.</h3>
          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation.</p>
          <p class="mt-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
@@ -76,11 +76,11 @@
             commodi consequatur? Quis autem vel eum iure.</p>
          <div class="row support-bottom mt-5 pt-xl-3 text-center">
             <div class="col-sm-4 services-w3ls-grid-2">
-               <i class="fa fa-modx"></i>
+               <i class="fab fa-modx"></i>
                <h4 class="mt-md-4 mt-3">Expert Cleaner</h4>
             </div>
             <div class="col-sm-4 services-w3ls-grid-2 my-sm-0 my-4">
-               <i class="fa fa-money"></i>
+               <i class="fa fa-money-bill-wave-alt"></i>
                <h4 class="mt-md-4 mt-3">Affordable Price</h4>
             </div>
             <div class="col-sm-4 services-w3ls-grid-2">
@@ -108,7 +108,7 @@
             </li>
             <li class="my-3">
                <span class="fa fa-envelope-open mr-2"></span>
-               <a href="mailto:example@email.com" class="text-secondary">Bimaaulia.15@gmail.com</a>
+               <a href="mailto:bimaaulia.15@gmail.com" class="text-secondary">Bimaaulia.15@gmail.com</a>
             </li>
             <li>
                <span class="fa fa-phone mr-2"></span>
