@@ -131,11 +131,15 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_order)
     {
-        $order = pelanggan::find($id);
-        $order->delete();
+        //return $id_order;
 
-        return redirect('/riwayat/masuk')->with('success', 'Pesanan Dibatalkan');
+        $orders = pelanggan::find($id_order);
+        if($orders){
+            $orders->delete();
+        return back()->with('success', 'Pesanan Dibatalkan');
+        }
+        return back()->with('gagal');
     }
 }

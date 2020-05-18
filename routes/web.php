@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/order', 'PelangganController@create');
-Route::post('/riwayat', 'PelangganController@delete'); 
+Route::post('/riwayat/destroy/{id_order}', 'PelangganController@destroy'); 
 Route::post('/order/store', 'PelangganController@store');
 Route::get('/riwayat/masuk', 'PelangganController@masuk');
 Route::get('/riwayat/proses', 'PelangganController@proses');
@@ -35,4 +35,4 @@ Auth::routes();
 //home ke laravel
 Route::get('/home', 'HomeController@index')->name('home');
 //home ke halaman awal yang da regis+login
-//Route::get('/home', 'PagesController@home')->name('home');
+//Route::get('/home', 'PagesController@home')->name('home');S

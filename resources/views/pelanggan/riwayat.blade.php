@@ -2,7 +2,7 @@
 
 @section('content')
   <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!-- <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,10 +11,11 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="/riwayat" method="POST" id="deleteForm">
+        <form action="/riwayat/destroy/" method="POST" id="deleteForm">
           
           {{ csrf_field() }}
-          {{ method_field('DELETE') }}
+          {{ method_field('DELETE') }} 
+          
 
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Batalkan</button>
@@ -24,6 +25,23 @@
       </div>
     </div>
   </div>
+-->
+@if(count($errors) > 0)
+        <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+        </div>
+    @endif
+
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            <p>{{ Session::get('success') }}</p>
+        </div>
+    @endif
+
   <div class="item table-responsive">
       <div class="d-flex pb-2 mb-3 border-bottom">
           <h1 class="h2" style="">Riwayat Pesanan</h1>
@@ -60,7 +78,11 @@
                 <td>{{ $orders -> status_order }} </td>
                 @if($orders -> status_order =='Menunggu Kurir')         
                   <td>
-                    <a href="#" class="btn btn-danger btn-sm delete">CANCEL</a>
+                  <form action="/riwayat/destroy/{{$orders->id_order}}" method="POST">
+                  @csrf
+                  @method('POST')
+                    <button type="submit" class="btn btn-danger">CANCEL</button>
+                    </form>
                   </td>                
                 @else
                   <td></td>        

@@ -11,7 +11,7 @@ class pelanggan extends Model
 
     //'status_order' diilangin
 
-protected $primaryKey = 'user_id';
+protected $primaryKey = 'id_order';
 
     public function user()
     {
