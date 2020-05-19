@@ -24,6 +24,8 @@ Route::get('/', function () {
 Route::get('/order', 'PelangganController@create');
 Route::post('/riwayat/destroy/{id_order}', 'PelangganController@destroy'); 
 Route::post('/order/store', 'PelangganController@store');
+Route::get('/home/edit/{id_user}', 'HomeController@edit');
+Route::put('/home/update/{id_user}', 'HomeController@update');
 Route::get('/riwayat/masuk', 'PelangganController@masuk');
 Route::get('/riwayat/proses', 'PelangganController@proses');
 Route::get('/riwayat/selesai', 'PelangganController@selesai');
