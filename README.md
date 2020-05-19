@@ -1,4 +1,4 @@
-!.(https://user-images.githubusercontent.com/60166756/82336822-3a389980-9a15-11ea-873e-dfaf66abfc9f.jpg)
+!.[Capture](https://user-images.githubusercontent.com/60166756/82336822-3a389980-9a15-11ea-873e-dfaf66abfc9f.jpg)
 
 ## EzLaundry
 
