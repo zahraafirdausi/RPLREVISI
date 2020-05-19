@@ -22,15 +22,26 @@ Aplikasi ini dibuat untuk membantu kegiatan yang bersifat rutininas seperti menc
 
 ## Ruang Lingkup
 
+# 1. Aplikasi untuk Pengusaha Laundry
+    program ini berfungsi untuk mempermudah pengusaha laundry dalam memanage pesanan.
+# 2. Aplikasi untuk user/masyarakat
+    program ini mempermudah masyarakat dalam melakukan pemesanan laundry yang tidak perlu untuk ketempat laundrynya.
+    
+    Fitur-Fitur pada aplikasi ini:
+    Fitur Order   -> untuk mengorder atau melakukan pesanan laundry
+    Fitur Reward  -> untukmelihat penawaran menarik atau promo-promo yang ada
+    Fitur Riwayat -> Untuk melihat status pesanan laundry sekaligus riwayat pesanan yang sudah dilakukan.
 
 ## Deskripsi Perangkat Lunak
 
 Software ini berbasis Web dimana users yaitu pengguna jasa laundry. Seorang pengguna jasa laundry dapat mendaftarkan dirinya dalam aplikasi ini. Melakukan orderan dan melihat status orderan. Seorang pengusaha laundry dapat melihat siapa saja yang memesan jasa dia melalui database. Melihat alamat costumer dan melakukan pick up di alamat tersebut.
 ## User Profile
-
+1. User : Seorang user yang ingin melakukan aktivitas laundry tanpa harus pergi ke tempat laundry
+2. Jasa Laundry : untuk mempermudah pencatatan orderan
 
 ## User Story
-
+- Sebagai seorang pelanggan, saya ingin dapat melakukan pemesanan laundry dirumah tanpa harus pergi ketempat laundry.
+- Sebagai seorang pelanggan, saya ingin dapat melihat dan mengecek pesanan laundry saya tanpa harus pergi mengeceknya di tempat laundry.
 
 ## Use Case Diagram
 ![baru-Page-1](https://user-images.githubusercontent.com/60166756/82340326-50485900-9a19-11ea-8790-220fff620013.png)
