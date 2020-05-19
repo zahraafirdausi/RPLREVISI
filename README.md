@@ -1,4 +1,4 @@
-https://github.com/zahraafirdausi/RPLREVISI/issues/2#issue-621009262.png
+!(https://user-images.githubusercontent.com/60166756/82336822-3a389980-9a15-11ea-873e-dfaf66abfc9f.jpg)
 
 ## EzLaundry
 
