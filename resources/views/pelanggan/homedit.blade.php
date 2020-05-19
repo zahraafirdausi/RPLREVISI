@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('profile')
+    class="active"
+@endsection
 @section('content')
 <div class="d-flex">
     <div class="item w-75">
@@ -38,12 +41,21 @@
                     </div>
                 @endif
             </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="simpan">
-        </div>
+            <div class="form-group">
+                <label for="no_telepon"> No Telepon </label>
+                <input type="text" name="no_telepon" id="no_telepon" class="form-control" placeholder="No. Telepon" value="{{ $user->no_telepon }}" >
+
+                @if($errors->has('no_telepon'))
+                    <div class="text-danger">
+                        {{$errors->first('no_telepon')}}
+                    </div>
+                @endif
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Simpan">
+            </div>
         </form>
         <br>
-        <a href="/home" class="btn btn-success ">Kembali</a>
+        <a href="/home" class="btn btn-primary ">Kembali</a>
     </div>
-
 @endsection

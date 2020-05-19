@@ -38,7 +38,7 @@
               </div>
           </div>
           <ul class="siderbar_menu">
-            <li>
+            <li @yield('profile')>
               <a href="{{ url('home') }}">
                 <div class="icon"><i class="fas fa-user"></i></div>
                 <div class="title">Profile</div>
@@ -56,7 +56,7 @@
                 <div class="title">Buat Pesanan</div>
               </a>
             </li>  
-            <li class="active">
+            <li @yield('riwayat')>
               <a href="{{ url('riwayat/masuk') }}">
                 <div class="icon"><i class="fas fa-receipt"></i></div>
                 <div class="title">Riwayat Pesanan</div>
@@ -100,9 +100,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="\js\bootstrap-input-spinner.js"></script>
-
-    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script>
       $(document).ready(function(){
         $(function(){
@@ -116,28 +113,56 @@
         $(".close, .bg_shadow").click(function(){
           $(".wrapper").removeClass("active");
         });
-
-        var table = $('#datatable').DataTable(); 
-
-        table.on('click', '.delete', function() {
-          $tr = $(this).closest('tr');
-          if(($tr).hasClass('child')) {
-            $tr = $tr.prev('.parent');
-          }
-
-          var data = table.row($tr).data();
-          console.log(data);
-
-          $('#deleteForm').attr('action', '/riwayat/'+data[0]);
-          $('#deleteModal').modal('show');
-        });
-
       });
 
       $("input[type='number']").inputSpinner();
 
+    // Fungsi kalkulasi total harga
+      var theForm = document.forms["orderForm"];
 
-      // Delete Pesanan
+      // Harga setiap pilihan paket
+      var paket_price = new Array();
+      paket_price[""]= 0;
+      paket_price["Standart (5 Day)"]= 8000;
+      paket_price["Premium (3 Day)"]= 10000;
+      paket_price["Express (2 Day)"]= 12000;
+      paket_price["DryClean (1 Day)"]= 25000;
+
+      function getPaketPrice() {
+        var paketPrice = 0;
+        var selectedPrice = theForm.elements["pilihan_paket_laundry"];
+        paketPrice = paket_price[selectedPrice.value];
+        return paketPrice;
+      }
+
+      // Potongan untuk setiap kode reward yang ada
+      var reward_list = new Array();
+      reward_list[""]=0;
+      reward_list["DISC300"]=3000;
+      reward_list["NEW100"]=5000;
+      function getReward() {
+        var rewardValue = 0;
+        var selectedReward = theForm.elements["diskon_reward"];
+        rewardValue = reward_list[selectedReward.value];
+        return rewardValue;
+      }
+
+      // Dapetin berat
+      function getBerat() {
+        var berat = theForm.elements["berat"];
+        var beratvalue = 0;
+        if(berat.value != "")
+          beratvalue = parseInt(berat.value);
+        return beratvalue;
+      }
+
+      // Mengitung total harga
+      function calculateTotal() {
+        var laundryPrice = getPaketPrice() * getBerat() - getReward();
+        if (laundryPrice<0) 
+          laundryPrice = 0;
+        document.getElementById('totalPrice').value= laundryPrice;
+      }
     </script>
   <!-- Script and related things-->
 </body>

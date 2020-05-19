@@ -1,8 +1,9 @@
 @extends('layouts.master')
-
+@section('riwayat')
+  class="active"
+@endsection
 @section('content')
-  <!-- Modal -->
- <!-- <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -23,9 +24,7 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
--->
+    </div></div> -->
 @if(count($errors) > 0)
         <div class="alert alert-danger">
         <ul>
@@ -84,11 +83,11 @@
                       <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">CANCEL</button>
                       </form>
                   </td>                
-                @elseif($orders -> status_order =='Diproses')
-                  <td><strong style="color: yellow;">{{ $orders -> status_order }}</strong></td> 
+                @elseif($orders -> status_order =='Proses')
+                  <td><strong class="p-2 bg-warning" style="border-radius:24px; color:white;">{{ $orders -> status_order }}</strong></td> 
                   <td></td> 
                 @else
-                  <td><strong style="color: red;">{{ $orders -> status_order }}</strong></td> 
+                  <td><strong class="p-2 bg-success" style="border-radius:24px; color:white;">{{ $orders -> status_order }}</strong></td> 
                   <td></td>    
                 @endif
               </tr>

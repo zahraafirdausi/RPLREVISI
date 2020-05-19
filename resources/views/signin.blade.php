@@ -88,6 +88,13 @@
 							<input id="alamat" type="text" class="input" name="Alamat" value="{{ old('Alamat') }}" required autocomplete="Alamat">
 						</div>
 					</div>
+					<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+							<h5>No Telepon</h5>
+							<input id="no_telepon" type="text" class="input" name="no_telepon" value="{{ old('no_telepon') }}" required autocomplete="no_telepon">
+						</div>
+					</div>
 					<div class="input-div one">
 						<div class="i"></div>
 						<div class="div">

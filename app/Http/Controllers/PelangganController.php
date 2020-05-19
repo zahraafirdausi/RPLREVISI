@@ -74,7 +74,6 @@ class PelangganController extends Controller
             'no_telepon'            => 'required',
             'pilihan_paket_laundry' => 'required',
             'berat'                 => 'required',
-            'diskon_reward'         => 'required',
             'status_pembayaran'     => 'required',
             'total_bayar'           => 'required',
         ]);

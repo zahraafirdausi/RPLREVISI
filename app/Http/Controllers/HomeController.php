@@ -56,12 +56,14 @@ class HomeController extends Controller
             'username'     => 'required',
             'Nama_Lengkap' => 'required',
             'Alamat'       => 'required',
+            'no_telepon'       => 'required',
         ]);
 
         $user = user::find($id_user);
-        $user->username     = $request->username;
-        $user->Nama_Lengkap = $request->Nama_Lengkap;
-        $user->Alamat       = $request->Alamat;
+        $user->username         = $request->username;
+        $user->Nama_Lengkap     = $request->Nama_Lengkap;
+        $user->Alamat           = $request->Alamat;
+        $user->no_telepon       = $request->no_telepon;
         $user->save();
         return redirect('/home');
 

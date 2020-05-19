@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $rewards -> judul_reward }}</h5>
                     <p class="card-text">{{ $rewards -> deskripsi }}</p>
-                    <a href="#" class="btn btn-success float-right">Dapatkan</a>
+                <a href="#" class="btn btn-success float-right" onclick="return alert('Gunakan kode reward {{ $rewards -> kode_reward }}')">Dapatkan</a>
                 </div>
             </div>
         @endforeach

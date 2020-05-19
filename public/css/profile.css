@@ -189,6 +189,9 @@ label {
 }
 
 @media (max-width: 1024px) {
+  .content > .d-flex {
+    flex-direction: column;
+  }
   .site_nav{
     left: -115%;
     transition: all 0.5s ease;
@@ -226,6 +229,18 @@ label {
     margin-left: 0 2%;
     margin-right: 0 2%;
   }
+
+  .content > .d-flex {
+    flex-direction: row;
+  }
+
+  
+  .content > .d-flex > .item {
+    width: 70%;
+    align-items: center;
+  }
+
+
 }
 
 @media (max-width: 528px) {
@@ -240,6 +255,14 @@ label {
   }
 
   .w-25 {
+    width: 100% !important;
+  }
+
+  .content > .d-flex {
+    flex-direction: column;
+  }
+
+  .content > .d-flex > .item {
     width: 100% !important;
   }
 }
