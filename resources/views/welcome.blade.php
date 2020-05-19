@@ -64,7 +64,7 @@
 <!-- //services -->
 
 <!-- middle section 2 -->
-<section class="middle-2 py-3" id="what">
+<section class="middle-2 py-3" id="services">
    <div class="row no-gutters">
       <div class="col-xl-6 who-left-w3pvt pt-xl-3">
          <h3 class="w3ls-title font-weight-bold mb-sm-5 mb-4"><span class="mb-3">Wash, Dry & Fold</span>

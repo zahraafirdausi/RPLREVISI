@@ -28,7 +28,7 @@ body {
     top: 0;
     left: 0;
     background: #000;
-    z-index: 1;
+    z-index: 3;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -41,7 +41,7 @@ body {
     left: 0;
     height: 100vh;
     background: #00a2c6;
-    z-index: 2;
+    z-index: 3;
     transition: all 0.3s ease;
 }
 
@@ -164,14 +164,15 @@ nav .logo a{
   padding: 20px;
 }
 
-.card-deck .card {
+.d-flex .item {
+  width: 30%;
   background: #fff;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125), -2px -2px 4px rgba(0,0,0,0.125);
   border-radius: 10px;
   margin: 10px 15px;
 }
 
-.card-deck .card img {
+.d-flex .item img {
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
 }

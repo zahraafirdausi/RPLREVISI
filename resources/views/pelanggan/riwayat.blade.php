@@ -75,17 +75,21 @@
                 <td>{{ $orders -> pilihan_paket_laundry }} </td>
                 <td>{{ $orders -> diskon_reward }} </td>
                 <td>{{ $orders -> total_bayar }} </td>
-                <td>{{ $orders -> status_order }} </td>
-                @if($orders -> status_order =='Menunggu Kurir')         
+                @if($orders -> status_order =='Menunggu Kurir')  
+                  <td><strong>{{ $orders -> status_order }}</strong></td>      
                   <td>
-                  <form action="/riwayat/destroy/{{$orders->id_order}}" method="POST">
-                  @csrf
-                  @method('POST')
-                    <button type="submit" class="btn btn-danger">CANCEL</button>
-                    </form>
+                    <form action="/riwayat/destroy/{{$orders->id_order}}" method="POST">
+                    @csrf
+                    @method('POST')
+                      <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">CANCEL</button>
+                      </form>
                   </td>                
+                @elseif($orders -> status_order =='Diproses')
+                  <td><strong style="color: yellow;">{{ $orders -> status_order }}</strong></td> 
+                  <td></td> 
                 @else
-                  <td></td>        
+                  <td><strong style="color: red;">{{ $orders -> status_order }}</strong></td> 
+                  <td></td>    
                 @endif
               </tr>
             @endforeach

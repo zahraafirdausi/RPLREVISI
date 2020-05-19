@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pelanggan;
+use App\Reward;
+use App\User_reward;
 use Illuminate\Support\Facades\Auth;
 
 class PelangganController extends Controller
@@ -25,7 +27,8 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        return view('pelanggan.create');
+        $reward = reward::all();
+        return view('pelanggan.create')->with('reward', $reward);
     }
 
     public function masuk()
@@ -50,8 +53,9 @@ class PelangganController extends Controller
     }
     
     public function reward()
-    {
-        return view('pelanggan.reward');
+    {   
+        $reward = reward::all();
+        return view('pelanggan.reward')->with('reward', $reward);
     }
 
     /**
