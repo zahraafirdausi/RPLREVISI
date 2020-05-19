@@ -1,3 +1,5 @@
+https://github.com/zahraafirdausi/RPLREVISI/issues/2#issue-621009262
+
 ## EzLaundry
 
 Website yang menjembatani antara pengusaha laundry dengan pengguna jasa laundry.
