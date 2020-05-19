@@ -22,14 +22,14 @@ Aplikasi ini dibuat untuk membantu kegiatan yang bersifat rutininas seperti menc
 
 ## Ruang Lingkup
 
-1. Aplikasi untuk Pengusaha Laundry
+1. Aplikasi untuk Pengusaha Laundry :
 program ini berfungsi untuk mempermudah pengusaha laundry dalam memanage pesanan.
-2. Aplikasi untuk user/masyarakat
+2. Aplikasi untuk user/masyarakat :
 program ini mempermudah masyarakat dalam melakukan pemesanan laundry yang tidak perlu untuk ketempat laundrynya.
 Fitur-Fitur pada aplikasi ini:
-Fitur Order   -> untuk mengorder atau melakukan pesanan laundry
-Fitur Reward  -> untukmelihat penawaran menarik atau promo-promo yang ada
-Fitur Riwayat -> Untuk melihat status pesanan laundry sekaligus riwayat pesanan yang sudah dilakukan.
+- Fitur Order : untuk mengorder atau melakukan pesanan laundry
+- Fitur Reward : untukmelihat penawaran menarik atau promo-promo yang ada
+- Fitur Riwayat : Untuk melihat status pesanan laundry sekaligus riwayat pesanan yang sudah dilakukan.
 
 ## Deskripsi Perangkat Lunak
 
