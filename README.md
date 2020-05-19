@@ -33,7 +33,7 @@ Software ini berbasis Web dimana users yaitu pengguna jasa laundry. Seorang peng
 
 
 ## Use Case Diagram
-
+![baru-Page-1](https://user-images.githubusercontent.com/60166756/82340326-50485900-9a19-11ea-8790-220fff620013.png)
 
 ## Use Case Description
 
