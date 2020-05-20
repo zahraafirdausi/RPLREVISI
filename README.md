@@ -75,15 +75,19 @@ Software ini berbasis Web dimana users yaitu pengguna jasa laundry. Seorang peng
 ## Hasil Implementasi Perangkat Lunak
 ### Tampilan awal pada saat mengakses website
 ![home](https://user-images.githubusercontent.com/54544861/82407708-18cac280-9a94-11ea-95eb-c57af8fcc12a.png)
+
 ![2020-05-20 (13)](https://user-images.githubusercontent.com/54544861/82408216-5d0a9280-9a95-11ea-8350-0d939ca030cf.png)
+
 ![2020-05-20 (14)](https://user-images.githubusercontent.com/54544861/82408236-685dbe00-9a95-11ea-9f75-de2b6c9a905c.png)
 
 ### Log-in & register page
 ![2020-05-20 (2)](https://user-images.githubusercontent.com/54544861/82407738-3009b000-9a94-11ea-9803-0d4491aded2d.png)
+
 ![2020-05-20 (3)](https://user-images.githubusercontent.com/54544861/82407820-60514e80-9a94-11ea-8bed-a71d5f3b5f62.png)
 
 ### Profile page
 ![2020-05-20 (4)](https://user-images.githubusercontent.com/54544861/82407853-7232f180-9a94-11ea-9e12-ecf3ed725b9d.png)
+
 ![2020-05-20 (5)](https://user-images.githubusercontent.com/54544861/82407921-9db5dc00-9a94-11ea-9fc9-786bb4cea7a2.png)
 
 ### Reward page
@@ -94,10 +98,14 @@ Software ini berbasis Web dimana users yaitu pengguna jasa laundry. Seorang peng
 
 ### Order History
 ![2020-05-20 (12)](https://user-images.githubusercontent.com/54544861/82408147-2765a980-9a95-11ea-954c-4518bac931f2.png)
+
 ![2020-05-20 (10)](https://user-images.githubusercontent.com/54544861/82408154-2d5b8a80-9a95-11ea-9fc6-120f6b85797a.png)
+
 ![2020-05-20 (11)](https://user-images.githubusercontent.com/54544861/82408158-2f254e00-9a95-11ea-867c-dd451422edb6.png)
 
 ### Tampilan untuk mobile view
 ![Untitled-1](https://user-images.githubusercontent.com/54544861/82410552-5599b800-9a9a-11ea-872f-1dc9cd0b94f2.png)
+
 ![1231](https://user-images.githubusercontent.com/54544861/82411246-a1009600-9a9b-11ea-8cbd-3f6dfa7a0639.png)
+
 ![qwe](https://user-images.githubusercontent.com/54544861/82411257-a5c54a00-9a9b-11ea-9474-6e78dbe529e4.png)
