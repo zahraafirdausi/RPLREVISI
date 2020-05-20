@@ -74,3 +74,14 @@ Software ini berbasis Web dimana users yaitu pengguna jasa laundry. Seorang peng
 
 ## Hasil Implementasi Perangkat Lunak
 
+![Annotation 2020-05-20 015749](https://user-images.githubusercontent.com/60166756/82403138-51fd3580-9a88-11ea-802c-f2027814383c.jpg)
+
+![Annotation 2020-05-20 105650](https://user-images.githubusercontent.com/60166756/82405691-d0f56c80-9a8e-11ea-818a-16cecd8df1cc.jpg)
+
+![Annotation 2020-05-20 114351](https://user-images.githubusercontent.com/60166756/82405857-3f3a2f00-9a8f-11ea-98fb-e80dbbc3fff2.jpg)
+
+![Annotation 2020-05-20 114542](https://user-images.githubusercontent.com/60166756/82405948-76a8db80-9a8f-11ea-9746-4a40f3271d46.jpg)
+
+![Annotation 2020-05-20 114627](https://user-images.githubusercontent.com/60166756/82406041-d3a49180-9a8f-11ea-84dc-6d0053cb34bf.jpg)
+
+![Annotation 2020-05-20 114759](https://user-images.githubusercontent.com/60166756/82406120-fafb5e80-9a8f-11ea-9bca-35ec7ec2319b.jpg)
